@@ -13,16 +13,13 @@ const Navbar = () => {
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Quien Soy?</a>
+          <a className="nav-link active" aria-current="page" href="#">Pizzas</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Servicios</a>
+          <a className="nav-link" href="#">Empanadas</a>
         </li>
         <li className="nav-item">
           <a className="nav-link" href="#">Contacto</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Reserva tu turno</a>
         </li>
       </ul>
     </div>
