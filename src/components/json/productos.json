@@ -27,5 +27,35 @@
         "precio": 1900,
         "stock": 9,
         "categoria": "pizzas"
+    },
+
+    {
+        "index": 4,
+        "nombre": "Empanada Bomba",
+        "descripcion": "Doble Bacon Cheese Burguer",
+        "img": "https://images.deliveryhero.io/image/pedidosya/products/e0b0668e-43a9-4f56-be01-f94dc2852fda.jpg?quality=90&width=1440&webp=1",
+        "precio": 400,
+        "stock": 9,
+        "categoria": "empanadas"
+    },
+
+    {
+        "index": 5,
+        "nombre": "Empanada Parrillera",
+        "descripcion": "Vacio y Provoleta",
+        "img": "https://imgs.search.brave.com/ohQa-mzMVfQCaGRFwgVJd_qYmoBG5DufoUHyvKi_1Es/rs:fit:200:200:1/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZGVsaXZlcnlo/ZXJvLmlvL2ltYWdl/L3BlZGlkb3N5YS9w/cm9kdWN0cy85NDJh/MDRjZC04OGQwLTQ5/NzctYmQyYi03YTYy/MDcxNDY5OTAuanBn/P3F1YWxpdHk9ODAm/d2lkdGg9MjAw",
+        "precio": 400,
+        "stock": 8,
+        "categoria": "empanadas"
+    },
+
+    {
+        "index": 6,
+        "nombre": "Empanada Calabaza",
+        "descripcion": "Masa de semillas con Calabaza y muzza",
+        "img": "https://images.deliveryhero.io/image/pedidosya/products/c2f32338-fbf6-4a35-8edb-6c445b946ce0.jpg?quality=90&width=1440&webp=1",
+        "precio": 400,
+        "stock": 9,
+        "categoria": "empanadas"
     }
 ]
