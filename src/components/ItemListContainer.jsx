@@ -1,5 +1,4 @@
 import React from 'react'
-import ItemCount from './ItemCount'
 import ItemList from './ItemList';
 import arrayProductos from "./json/productos.json"
 import { useEffect, useState } from "react";
@@ -26,7 +25,6 @@ const ItemListContainer = () => {
   return (
     <div className="container">
               <ItemList items={items} />
-              <ItemCount stock={10} />
     </div>
 
     )
