@@ -15,5 +15,5 @@ Se muestran las siguientes categorias:
 
 Cada producto tiene su stock limitado. A continuacion un **gif** mostrando el funcionamiento:
 
-![Pizzas-Abuela](https://drive.google.com/drive/folders/1MTkFuwe5duaGqOwjgB1jcyZm4ZrytCOy)
+[Gif-Pizzas-Abuela](https://drive.google.com/drive/folders/1MTkFuwe5duaGqOwjgB1jcyZm4ZrytCOy)
 
