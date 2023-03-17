@@ -1,26 +1,38 @@
 import React from 'react'
 import ItemList from './ItemList';
-import arrayProductos from "./json/productos.json"
+// import arrayProductos from "./json/productos.json"
 import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
+import { addDoc, collection, getFirestore } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
   const {id} = useParams(); 
 
+  // useEffect(() => {
+  //   const promesa = new Promise((resolve) => {
+  //       setTimeout(() => {
+  //         resolve(id ? arrayProductos.filter(item => item.categoria === id) : arrayProductos);
+  //       }, 2000);
+
+  //   });
+
+  //   promesa.then((respuesta) => {
+  //     setItems(respuesta);
+  //   });
+
+  // }, [id]);
+
   useEffect(() => {
-    const promesa = new Promise((resolve) => {
-        setTimeout(() => {
-          resolve(id ? arrayProductos.filter(item => item.categoria === id) : arrayProductos);
-        }, 2000);
+    const db = getFirestore();
+    const itemsCollection = collection(db, "items");
 
+    arrayProductos.forEach(item => {
+      addDoc(itemsCollection, item);
     });
 
-    promesa.then((respuesta) => {
-      setItems(respuesta);
-    });
-
-  }, [id]);
+      console.log("Se Agregaron los Productos !");
+  }, []);
 
   return (
     <div className="container">
