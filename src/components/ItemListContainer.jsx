@@ -3,7 +3,7 @@ import ItemList from './ItemList';
 // import arrayProductos from "./json/productos.json"
 import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
-import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -23,16 +23,25 @@ const ItemListContainer = () => {
 
   // }, [id]);
 
+  // useEffect(() => {
+  //   const db = getFirestore();
+  //   const itemsCollection = collection(db, "items");
+
+  //   arrayProductos.forEach(item => {
+  //     addDoc(itemsCollection, item);
+  //   });
+
+  //     console.log("Se Agregaron los Productos !");
+  // }, []);
+
   useEffect(() => {
     const db = getFirestore();
     const itemsCollection = collection(db, "items");
-
-    arrayProductos.forEach(item => {
-      addDoc(itemsCollection, item);
+    const filter = id ? query(itemsCollection, where("categoria", "==", id)) : itemsCollection;
+    getDocs(filter).then(elements => {
+      setItems(elements.docs.map(element => ({id:element.id, ...element.data()})));
     });
-
-      console.log("Se Agregaron los Productos !");
-  }, []);
+  }, [id]);
 
   return (
     <div className="container">
