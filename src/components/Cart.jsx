@@ -42,23 +42,24 @@ const Cart = () => {
             <h1 className="text-center">Productos Seleccionados</h1>
                 <div className="col-md-3">
                 <form>
-                    <div class="mb-3">
-                        <label htmlFor="nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" onInput={(e) =>{setNombre(e.target.value)}}/>
+                    <div className="mb-3">
+                        <label htmlFor="nombre" className="form-label">Nombre</label>
+                        <input type="text" className="form-control" id="nombre" onInput={(e) =>{setNombre(e.target.value)}}/>
                     </div>
-                    <div class="mb-3">
-                        <label htmlFor="email" class="form-label">Email</label>
-                        <input type="text" class="form-control" id="email" onInput={(e) =>{setEmail(e.target.value)}}/>
+                    <div className="mb-3">
+                        <label htmlFor="email" className="form-label">Email</label>
+                        <input type="text" className="form-control" id="email" onInput={(e) =>{setEmail(e.target.value)}}/>
                     </div>
-                    <div class="mb-3">
-                        <label htmlFor="telefono" class="form-label">Telefono</label>
-                        <input type="text" class="form-control" id="telefono" onInput={(e) =>{setTelefono(e.target.value)}}/>
+                    <div className="mb-3">
+                        <label htmlFor="telefono" className="form-label">Telefono</label>
+                        <input type="text" className="form-control" id="telefono" onInput={(e) =>{setTelefono(e.target.value)}}/>
                     </div>
                     <button type="button" className="btn btn-warning" onClick={generarOrden}>Comprar</button>
                     </form>
                 </div>
                 <div className="col-md-9">
                     <table className="table">
+                        <tbody>
                         <tr>
                         <td className="text-end" colSpan={5}><Link className="btn btn-warning bg-warning" onClick={() => {clear()}}>Vaciar Carrito</Link></td>
                         </tr>
@@ -81,13 +82,14 @@ const Cart = () => {
                             <td className="text-center"><b>${cartSum()}</b></td>
                             <td>&nbsp;</td>
                         </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
 
             <div className="row my-3">
                 <div className="col-md-12">
-                    {orderId ? <div class="alert alert-warning text-center" role="alert"><h3>Gracias por tu Compra!</h3><p>Se generó una Orden de Compra con el ID: <b>{orderId}</b></p></div> : ""}
+                    {orderId ? <div className="alert alert-warning text-center" role="alert"><h3>Gracias por tu Compra!</h3><p>Se generó una Orden de Compra con el ID: <b>{orderId}</b></p></div> : ""}
                 </div>
             </div>
 
